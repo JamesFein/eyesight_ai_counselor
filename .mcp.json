@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "Context 7": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "@upstash/context7-mcp@latest"]
+    },
+    "pydantic-ai Docs": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "mcp-remote@latest",
+        "https://gitmcp.io/pydantic/pydantic-ai"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "cmd",
+      "args": ["/c", "npx", "chrome-devtools-mcp@latest"]
+    },
+    "qdrant Docs": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "mcp-remote@latest",
+        "https://gitmcp.io/qdrant/qdrant"
+      ]
+    },
+    "chonkie Docs": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx.cmd",
+        "-y",
+        "mcp-remote@latest",
+        "https://gitmcp.io/chonkie-inc/chonkie"
+      ]
+    }
+  }
+}
