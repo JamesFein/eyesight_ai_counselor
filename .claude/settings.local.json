@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venvScriptsactivate)",
+      "Bash(python demo_query.py:*)",
+      "Bash(powershell -Command \"cd ''C:\\\\Users\\\\Administrator\\\\Desktop\\\\eyesight_ai_counselor''; .\\\\.venv\\\\Scripts\\\\Activate.ps1; python demo_query.py\")",
+      "Bash(powershell -Command \"docker ps | Select-String ''qdrant''\")"
+    ]
+  }
+}

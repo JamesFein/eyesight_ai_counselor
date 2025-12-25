@@ -133,6 +133,15 @@
         "documentation": {}
     },
     {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
         "label": "logging",
         "kind": 6,
         "isExtraImport": true,
@@ -142,76 +151,100 @@
         "documentation": {}
     },
     {
-        "label": "re",
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "jieba",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
+        "importPath": "jieba",
+        "description": "jieba",
+        "detail": "jieba",
         "documentation": {}
     },
     {
@@ -228,6 +261,86 @@
         "description": "dotenv",
         "isExtraImport": true,
         "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncOpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncOpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncOpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Agent",
+        "importPath": "pydantic_ai",
+        "description": "pydantic_ai",
+        "isExtraImport": true,
+        "detail": "pydantic_ai",
+        "documentation": {}
+    },
+    {
+        "label": "Agent",
+        "importPath": "pydantic_ai",
+        "description": "pydantic_ai",
+        "isExtraImport": true,
+        "detail": "pydantic_ai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAIChatModel",
+        "importPath": "pydantic_ai.models.openai",
+        "description": "pydantic_ai.models.openai",
+        "isExtraImport": true,
+        "detail": "pydantic_ai.models.openai",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAIProvider",
+        "importPath": "pydantic_ai.providers.openai",
+        "description": "pydantic_ai.providers.openai",
+        "isExtraImport": true,
+        "detail": "pydantic_ai.providers.openai",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncQdrantClient",
+        "importPath": "qdrant_client",
+        "description": "qdrant_client",
+        "isExtraImport": true,
+        "detail": "qdrant_client",
         "documentation": {}
     },
     {
@@ -260,6 +373,22 @@
         "description": "qdrant_client",
         "isExtraImport": true,
         "detail": "qdrant_client",
+        "documentation": {}
+    },
+    {
+        "label": "Filter",
+        "importPath": "qdrant_client.models",
+        "description": "qdrant_client.models",
+        "isExtraImport": true,
+        "detail": "qdrant_client.models",
+        "documentation": {}
+    },
+    {
+        "label": "SparseVector",
+        "importPath": "qdrant_client.models",
+        "description": "qdrant_client.models",
+        "isExtraImport": true,
+        "detail": "qdrant_client.models",
         "documentation": {}
     },
     {
@@ -319,19 +448,12 @@
         "documentation": {}
     },
     {
-        "label": "AsyncOpenAI",
-        "importPath": "openai",
-        "description": "openai",
+        "label": "re",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "openai",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncOpenAI",
-        "importPath": "openai",
-        "description": "openai",
-        "isExtraImport": true,
-        "detail": "openai",
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
@@ -359,38 +481,12 @@
         "documentation": {}
     },
     {
-        "label": "jieba",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "jieba",
-        "description": "jieba",
-        "detail": "jieba",
-        "documentation": {}
-    },
-    {
-        "label": "hashlib",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "hashlib",
-        "description": "hashlib",
-        "detail": "hashlib",
-        "documentation": {}
-    },
-    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "uuid",
         "description": "uuid",
         "detail": "uuid",
-        "documentation": {}
-    },
-    {
-        "label": "Agent",
-        "importPath": "pydantic_ai",
-        "description": "pydantic_ai",
-        "isExtraImport": true,
-        "detail": "pydantic_ai",
         "documentation": {}
     },
     {
@@ -679,6 +775,204 @@
         "description": ".venv.Scripts.pywin32_testall",
         "peekOfCode": "failures = []\n# Run a test using subprocess and wait for the result.\n# If we get an returncode != 0, we know that there was an error, but we don't\n# abort immediately - we run as many tests as we can.\ndef run_test(script, cmdline_extras):\n    dirname, scriptname = os.path.split(script)\n    # some tests prefer to be run from their directory.\n    cmd = [sys.executable, \"-u\", scriptname] + cmdline_extras\n    print(\"--- Running '%s' ---\" % script)\n    sys.stdout.flush()",
         "detail": ".venv.Scripts.pywin32_testall",
+        "documentation": {}
+    },
+    {
+        "label": "SubQuery",
+        "kind": 6,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "class SubQuery(BaseModel):\n    \"\"\"子检索结构\"\"\"\n    id: str\n    statement: str\n    focus: str\nclass DecompositionResult(BaseModel):\n    \"\"\"问题分解输出\"\"\"\n    sub_queries: list[SubQuery]\n    reasoning: str\nclass RelevantExtract(BaseModel):",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "DecompositionResult",
+        "kind": 6,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "class DecompositionResult(BaseModel):\n    \"\"\"问题分解输出\"\"\"\n    sub_queries: list[SubQuery]\n    reasoning: str\nclass RelevantExtract(BaseModel):\n    \"\"\"相关段落提取\"\"\"\n    source_file: str\n    excerpt: str\n    relevance: Literal[\"high\", \"medium\", \"low\"]\nclass RelevanceJudgeResult(BaseModel):",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "RelevantExtract",
+        "kind": 6,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "class RelevantExtract(BaseModel):\n    \"\"\"相关段落提取\"\"\"\n    source_file: str\n    excerpt: str\n    relevance: Literal[\"high\", \"medium\", \"low\"]\nclass RelevanceJudgeResult(BaseModel):\n    \"\"\"相关性判断输出\"\"\"\n    sub_query_id: str\n    sub_query_statement: str\n    relevant_extracts: list[RelevantExtract]",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "RelevanceJudgeResult",
+        "kind": 6,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "class RelevanceJudgeResult(BaseModel):\n    \"\"\"相关性判断输出\"\"\"\n    sub_query_id: str\n    sub_query_statement: str\n    relevant_extracts: list[RelevantExtract]\n    sub_answer: str\n    confidence: Literal[\"high\", \"medium\", \"low\"]\n    missing_aspects: list[str]\nclass RetrievedChunk(BaseModel):\n    \"\"\"检索到的文本块\"\"\"",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "RetrievedChunk",
+        "kind": 6,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "class RetrievedChunk(BaseModel):\n    \"\"\"检索到的文本块\"\"\"\n    source_file: str\n    score: float\n    content: str\n# ============================================\n# 核心服务类\n# ============================================\nclass DemoQueryService:\n    \"\"\"Demo查询服务\"\"\"",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "DemoQueryService",
+        "kind": 6,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "class DemoQueryService:\n    \"\"\"Demo查询服务\"\"\"\n    def __init__(self):\n        # 初始化Qdrant客户端\n        self.qdrant_client = AsyncQdrantClient(\n            host=os.getenv(\"QDRANT_HOST\", \"localhost\"),\n            port=int(os.getenv(\"QDRANT_PORT\", \"6333\")),\n            prefer_grpc=os.getenv(\"QDRANT_PREFER_GRPC\", \"true\").lower() == \"true\"\n        )\n        # 初始化OpenAI客户端（用于Embedding）",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# ============================================\n# 配置常量\n# ============================================\nCOLLECTION_NAME = \"eye_ana_guide\"\nPROMPTS_DIR = Path(r\"C:\\Users\\Administrator\\Desktop\\eyesight_ai_counselor\\prompts\")\nQUERY_LOG_DIR = Path(os.getenv(\"QUERY_LOG_DIR\", \"./query_logs\"))\n# Agent配置\nDECOMPOSITION_MODEL = os.getenv(\"DECOMPOSITION_MODEL\", \"gpt-4.1\")\nDECOMPOSITION_TEMPERATURE = float(os.getenv(\"DECOMPOSITION_TEMPERATURE\", \"0.3\"))",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "COLLECTION_NAME",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "COLLECTION_NAME = \"eye_ana_guide\"\nPROMPTS_DIR = Path(r\"C:\\Users\\Administrator\\Desktop\\eyesight_ai_counselor\\prompts\")\nQUERY_LOG_DIR = Path(os.getenv(\"QUERY_LOG_DIR\", \"./query_logs\"))\n# Agent配置\nDECOMPOSITION_MODEL = os.getenv(\"DECOMPOSITION_MODEL\", \"gpt-4.1\")\nDECOMPOSITION_TEMPERATURE = float(os.getenv(\"DECOMPOSITION_TEMPERATURE\", \"0.3\"))\nRELEVANCE_MODEL = os.getenv(\"RELEVANCE_MODEL\", \"gpt-4.1\")\nRELEVANCE_TEMPERATURE = float(os.getenv(\"RELEVANCE_TEMPERATURE\", \"0.2\"))\n# 检索配置\nBM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "PROMPTS_DIR",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "PROMPTS_DIR = Path(r\"C:\\Users\\Administrator\\Desktop\\eyesight_ai_counselor\\prompts\")\nQUERY_LOG_DIR = Path(os.getenv(\"QUERY_LOG_DIR\", \"./query_logs\"))\n# Agent配置\nDECOMPOSITION_MODEL = os.getenv(\"DECOMPOSITION_MODEL\", \"gpt-4.1\")\nDECOMPOSITION_TEMPERATURE = float(os.getenv(\"DECOMPOSITION_TEMPERATURE\", \"0.3\"))\nRELEVANCE_MODEL = os.getenv(\"RELEVANCE_MODEL\", \"gpt-4.1\")\nRELEVANCE_TEMPERATURE = float(os.getenv(\"RELEVANCE_TEMPERATURE\", \"0.2\"))\n# 检索配置\nBM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))\nBM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "QUERY_LOG_DIR",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "QUERY_LOG_DIR = Path(os.getenv(\"QUERY_LOG_DIR\", \"./query_logs\"))\n# Agent配置\nDECOMPOSITION_MODEL = os.getenv(\"DECOMPOSITION_MODEL\", \"gpt-4.1\")\nDECOMPOSITION_TEMPERATURE = float(os.getenv(\"DECOMPOSITION_TEMPERATURE\", \"0.3\"))\nRELEVANCE_MODEL = os.getenv(\"RELEVANCE_MODEL\", \"gpt-4.1\")\nRELEVANCE_TEMPERATURE = float(os.getenv(\"RELEVANCE_TEMPERATURE\", \"0.2\"))\n# 检索配置\nBM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))\nBM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))\nSEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "DECOMPOSITION_MODEL",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "DECOMPOSITION_MODEL = os.getenv(\"DECOMPOSITION_MODEL\", \"gpt-4.1\")\nDECOMPOSITION_TEMPERATURE = float(os.getenv(\"DECOMPOSITION_TEMPERATURE\", \"0.3\"))\nRELEVANCE_MODEL = os.getenv(\"RELEVANCE_MODEL\", \"gpt-4.1\")\nRELEVANCE_TEMPERATURE = float(os.getenv(\"RELEVANCE_TEMPERATURE\", \"0.2\"))\n# 检索配置\nBM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))\nBM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))\nSEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))\nSEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "DECOMPOSITION_TEMPERATURE",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "DECOMPOSITION_TEMPERATURE = float(os.getenv(\"DECOMPOSITION_TEMPERATURE\", \"0.3\"))\nRELEVANCE_MODEL = os.getenv(\"RELEVANCE_MODEL\", \"gpt-4.1\")\nRELEVANCE_TEMPERATURE = float(os.getenv(\"RELEVANCE_TEMPERATURE\", \"0.2\"))\n# 检索配置\nBM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))\nBM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))\nSEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))\nSEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "RELEVANCE_MODEL",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "RELEVANCE_MODEL = os.getenv(\"RELEVANCE_MODEL\", \"gpt-4.1\")\nRELEVANCE_TEMPERATURE = float(os.getenv(\"RELEVANCE_TEMPERATURE\", \"0.2\"))\n# 检索配置\nBM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))\nBM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))\nSEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))\nSEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置\nEMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "RELEVANCE_TEMPERATURE",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "RELEVANCE_TEMPERATURE = float(os.getenv(\"RELEVANCE_TEMPERATURE\", \"0.2\"))\n# 检索配置\nBM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))\nBM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))\nSEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))\nSEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置\nEMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")\n# LLM配置",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "BM25_TOP_K",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "BM25_TOP_K = int(os.getenv(\"BM25_TOP_K\", \"5\"))\nBM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))\nSEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))\nSEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置\nEMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")\n# LLM配置\nLLM_BASE_URL = os.getenv(\"LLM_BASE_URL\", \"https://api.openai.com/v1\")\nLLM_API_KEY = os.getenv(\"LLM_API_KEY\")",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "BM25_THRESHOLD",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "BM25_THRESHOLD = float(os.getenv(\"BM25_THRESHOLD\", \"2\"))\nSEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))\nSEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置\nEMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")\n# LLM配置\nLLM_BASE_URL = os.getenv(\"LLM_BASE_URL\", \"https://api.openai.com/v1\")\nLLM_API_KEY = os.getenv(\"LLM_API_KEY\")\n# ============================================",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "SEMANTIC_TOP_K",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "SEMANTIC_TOP_K = int(os.getenv(\"SEMANTIC_TOP_K\", \"3\"))\nSEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置\nEMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")\n# LLM配置\nLLM_BASE_URL = os.getenv(\"LLM_BASE_URL\", \"https://api.openai.com/v1\")\nLLM_API_KEY = os.getenv(\"LLM_API_KEY\")\n# ============================================\n# 数据结构定义",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "SEMANTIC_THRESHOLD",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "SEMANTIC_THRESHOLD = float(os.getenv(\"SEMANTIC_THRESHOLD\", \"0.2\"))\nMAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置\nEMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")\n# LLM配置\nLLM_BASE_URL = os.getenv(\"LLM_BASE_URL\", \"https://api.openai.com/v1\")\nLLM_API_KEY = os.getenv(\"LLM_API_KEY\")\n# ============================================\n# 数据结构定义\n# ============================================",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_SUB_QUERIES",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "MAX_SUB_QUERIES = int(os.getenv(\"MAX_SUB_QUERIES\", \"5\"))\n# Embedding配置\nEMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")\n# LLM配置\nLLM_BASE_URL = os.getenv(\"LLM_BASE_URL\", \"https://api.openai.com/v1\")\nLLM_API_KEY = os.getenv(\"LLM_API_KEY\")\n# ============================================\n# 数据结构定义\n# ============================================\nclass SubQuery(BaseModel):",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "EMBEDDING_MODEL",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "EMBEDDING_MODEL = os.getenv(\"EMBEDDING_MODEL\", \"text-embedding-3-small\")\n# LLM配置\nLLM_BASE_URL = os.getenv(\"LLM_BASE_URL\", \"https://api.openai.com/v1\")\nLLM_API_KEY = os.getenv(\"LLM_API_KEY\")\n# ============================================\n# 数据结构定义\n# ============================================\nclass SubQuery(BaseModel):\n    \"\"\"子检索结构\"\"\"\n    id: str",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "LLM_BASE_URL",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "LLM_BASE_URL = os.getenv(\"LLM_BASE_URL\", \"https://api.openai.com/v1\")\nLLM_API_KEY = os.getenv(\"LLM_API_KEY\")\n# ============================================\n# 数据结构定义\n# ============================================\nclass SubQuery(BaseModel):\n    \"\"\"子检索结构\"\"\"\n    id: str\n    statement: str\n    focus: str",
+        "detail": "demo_query",
+        "documentation": {}
+    },
+    {
+        "label": "LLM_API_KEY",
+        "kind": 5,
+        "importPath": "demo_query",
+        "description": "demo_query",
+        "peekOfCode": "LLM_API_KEY = os.getenv(\"LLM_API_KEY\")\n# ============================================\n# 数据结构定义\n# ============================================\nclass SubQuery(BaseModel):\n    \"\"\"子检索结构\"\"\"\n    id: str\n    statement: str\n    focus: str\nclass DecompositionResult(BaseModel):",
+        "detail": "demo_query",
         "documentation": {}
     },
     {

@@ -1,6 +1,6 @@
 # 提示词文档说明
 
-本目录包含眼科近视防控AI咨询系统的所有提示词文件。系统采用两阶段搜索架构，通过多个专业Agent协同工作，为用户提供精准、可溯源的问答服务。
+本目录包含眼科近视防控 AI 咨询系统的所有提示词文件。系统采用两阶段搜索架构，通过多个专业 Agent 协同工作，为用户提供精准、可溯源的问答服务。
 
 ---
 
@@ -29,19 +29,21 @@ prompts/
 
 ---
 
-## 核心Agent（PRD要求）
+## 核心 Agent（PRD 要求）
 
-### 1. 问题分解Agent (Decomposition Agent)
+### 1. 问题分解 Agent (Decomposition Agent)
 
-**功能**：将用户问题分解为1-5个子检索肯定句（非问句），用于在文档库中精准检索
+**功能**：将用户问题分解为 1-5 个子检索肯定句（非问句），用于在文档库中精准检索
 
-**模型建议**：gpt-4o-mini / gpt-4o（需要批判性思维）
+**模型建议**：gpt-4.1 / gpt-4.1（需要批判性思维）
 
 **文件**：
+
 - 系统提示词：`decomposition_system_prompt.txt`
 - 用户提示词：`decomposition_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "original_query": "用户的原始问题"
@@ -49,6 +51,7 @@ prompts/
 ```
 
 **输出结构**：
+
 ```json
 {
   "sub_queries": [
@@ -63,24 +66,27 @@ prompts/
 ```
 
 **关键特点**：
+
 - 使用肯定句而非问句（更贴近文档原文）
 - 覆盖多维度：定义、原理、适应症、禁忌症、效果、注意事项等
 - 使用专业术语和同义词
-- 简单问题1-2个，复杂问题最多5个
+- 简单问题 1-2 个，复杂问题最多 5 个
 
 ---
 
-### 2. 相关性判断Agent (Relevance Judge Agent)
+### 2. 相关性判断 Agent (Relevance Judge Agent)
 
 **功能**：判断检索到的文本块相关性，提取可用的原文段落，生成子答案
 
-**模型建议**：gpt-4o-mini / gpt-4o（需要批判性思维）
+**模型建议**：gpt-4.1 / gpt-4.1（需要批判性思维）
 
 **文件**：
+
 - 系统提示词：`relevance_judge_system_prompt.txt`
 - 用户提示词：`relevance_judge_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "sub_query_id": "sq_1",
@@ -97,6 +103,7 @@ prompts/
 ```
 
 **输出结构**：
+
 ```json
 {
   "sub_query_id": "sq_1",
@@ -115,6 +122,7 @@ prompts/
 ```
 
 **关键特点**：
+
 - 保持原文表述，不改写
 - 标注来源文件名
 - 评估置信度
@@ -122,17 +130,19 @@ prompts/
 
 ---
 
-### 3. 充分性判断Agent (Sufficiency Judge Agent)
+### 3. 充分性判断 Agent (Sufficiency Judge Agent)
 
 **功能**：判断第一阶段检索是否充分，决定是否需要第二阶段
 
-**模型建议**：gpt-4o-mini / gpt-4o（需要批判性思维）
+**模型建议**：gpt-4.1 / gpt-4.1（需要批判性思维）
 
 **文件**：
+
 - 系统提示词：`sufficiency_judge_system_prompt.txt`
 - 用户提示词：`sufficiency_judge_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "original_query": "用户原始问题",
@@ -152,6 +162,7 @@ prompts/
 ```
 
 **输出结构**：
+
 ```json
 {
   "is_sufficient": true/false,
@@ -171,24 +182,27 @@ prompts/
 ```
 
 **关键特点**：
+
 - 扮演严谨验光师角色
 - 目标触发率 < 20%（大多数情况一阶段足够）
-- 追加子检索最多2-3条
+- 追加子检索最多 2-3 条
 - 只在确实缺少关键信息时才触发第二阶段
 
 ---
 
-### 4. 答案生成Agent (Answer Generation Agent)
+### 4. 答案生成 Agent (Answer Generation Agent)
 
 **功能**：流式生成结构化小型报告（TL;DR → 完整结论 → 论据与来源）
 
-**模型建议**：gpt-4o（高质量输出）
+**模型建议**：gpt-4.1（高质量输出）
 
 **文件**：
+
 - 系统提示词：`answer_generation_system_prompt.txt`
 - 用户提示词：`answer_generation_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "original_query": "用户原始问题",
@@ -209,14 +223,15 @@ prompts/
 ```
 
 **输出格式**：
+
 ```markdown
 ## TL;DR
 
-[1-2句话高度概括核心答案]
+[1-2 句话高度概括核心答案]
 
 ## 完整结论
 
-[2-4句话的专业完整结论]
+[2-4 句话的专业完整结论]
 
 ## 论据与来源
 
@@ -236,6 +251,7 @@ prompts/
 ```
 
 **关键特点**：
+
 - 结论优先输出
 - 每个论点必须有来源支持
 - 引用原文保持原文表述
@@ -244,19 +260,21 @@ prompts/
 
 ---
 
-## 辅助Agent（系统增强）
+## 辅助 Agent（系统增强）
 
-### 5. 意图识别Agent (Intent Classifier)
+### 5. 意图识别 Agent (Intent Classifier)
 
 **功能**：守门员，判断用户问题是否在服务范围内
 
-**模型建议**：gpt-4o-mini（快速分类）
+**模型建议**：gpt-4.1（快速分类）
 
 **文件**：
+
 - 系统提示词：`intent_classifier_system_prompt.txt`
 - 用户提示词：`intent_classifier_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "user_query": "用户问题",
@@ -268,6 +286,7 @@ prompts/
 ```
 
 **输出结构**：
+
 ```json
 {
   "intent": "in_scope/edge_case/out_of_scope/greeting/unclear",
@@ -279,6 +298,7 @@ prompts/
 ```
 
 **服务范围**：
+
 - in_scope：近视防控方法、近视知识、眼科检查、儿童青少年视力健康
 - edge_case：成人近视、其他眼部问题的基础知识
 - out_of_scope：非眼科问题、与近视防控无关的眼科问题
@@ -287,17 +307,19 @@ prompts/
 
 ---
 
-### 6. 问题改写Agent (Query Rewrite Agent)
+### 6. 问题改写 Agent (Query Rewrite Agent)
 
 **功能**：多轮对话中的指代消解和省略补充
 
-**模型建议**：gpt-4o-mini（快速改写）
+**模型建议**：gpt-4.1（快速改写）
 
 **文件**：
+
 - 系统提示词：`query_rewrite_system_prompt.txt`
 - 用户提示词：`query_rewrite_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "current_query": "用户当前问题",
@@ -309,6 +331,7 @@ prompts/
 ```
 
 **输出结构**：
+
 ```json
 {
   "original_query": "用户原始问题",
@@ -319,7 +342,8 @@ prompts/
 ```
 
 **改写规则**：
-- 指代消解（"它"→具体对象）
+
+- 指代消解（"它"→ 具体对象）
 - 省略补充（补充主语、条件等）
 - 保持原意
 - 简洁完整
@@ -330,13 +354,15 @@ prompts/
 
 **功能**：判断简单/复杂问题，决定使用快速路径还是标准路径
 
-**模型建议**：gpt-4o-mini（快速分类）
+**模型建议**：gpt-4.1（快速分类）
 
 **文件**：
+
 - 系统提示词：`query_classifier_system_prompt.txt`
 - 用户提示词：`query_classifier_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "original_query": "用户问题"
@@ -344,6 +370,7 @@ prompts/
 ```
 
 **输出结构**：
+
 ```json
 {
   "query_type": "simple/complex",
@@ -354,13 +381,15 @@ prompts/
 ```
 
 **简单问题特征**：
-- 单一概念查询（"XX是什么？"）
-- 直接事实查询（"XX的正常范围是多少？"）
-- 是非判断查询（"XX能不能XX？"）
+
+- 单一概念查询（"XX 是什么？"）
+- 直接事实查询（"XX 的正常范围是多少？"）
+- 是非判断查询（"XX 能不能 XX？"）
 - 单一维度查询
 
 **复杂问题特征**：
-- 比较选择类（"A和B哪个更好？"）
+
+- 比较选择类（"A 和 B 哪个更好？"）
 - 个性化建议类（包含年龄、度数等信息）
 - 多维度综合类
 - 决策支持类
@@ -368,17 +397,19 @@ prompts/
 
 ---
 
-### 8. 简单答案生成Agent (Simple Answer Generation)
+### 8. 简单答案生成 Agent (Simple Answer Generation)
 
 **功能**：快速路径的简洁答案生成（不走两阶段流程）
 
-**模型建议**：gpt-4o-mini（快速生成）
+**模型建议**：gpt-4.1（快速生成）
 
 **文件**：
+
 - 系统提示词：`simple_answer_system_prompt.txt`
 - 用户提示词：`simple_answer_user_prompt.txt`
 
 **输入变量**：
+
 ```python
 {
     "original_query": "用户问题",
@@ -393,6 +424,7 @@ prompts/
 ```
 
 **输出格式**：
+
 ```
 [直接回答内容，2-4句话]
 
@@ -400,7 +432,8 @@ prompts/
 ```
 
 **关键特点**：
-- 简洁直接（2-4句话）
+
+- 简洁直接（2-4 句话）
 - 专业且通俗
 - 标注来源
 - 必要时安全提醒
@@ -471,14 +504,16 @@ prompts/
 
 ## 模板语法说明
 
-user_prompt文件使用**Handlebars模板语法**：
+user_prompt 文件使用**Handlebars 模板语法**：
 
 ### 基本变量
+
 ```handlebars
 {{variable_name}}
 ```
 
 ### 条件判断
+
 ```handlebars
 {{#if condition}}
   内容
@@ -488,10 +523,12 @@ user_prompt文件使用**Handlebars模板语法**：
 ```
 
 ### 数组遍历
+
 ```handlebars
 {{#each array_name}}
   {{this.property}}
-  {{@index}}  <!-- 数组索引 -->
+  {{@index}}
+  <!-- 数组索引 -->
 {{/each}}
 ```
 
@@ -499,34 +536,34 @@ user_prompt文件使用**Handlebars模板语法**：
 
 ## 配置建议
 
-### Agent模型配置（.env）
+### Agent 模型配置（.env）
 
 ```ini
 # 问题分解Agent
-DECOMPOSITION_MODEL=gpt-4o-mini
+DECOMPOSITION_MODEL=gpt-4.1
 DECOMPOSITION_TEMPERATURE=0.3
 DECOMPOSITION_MAX_TOKENS=800
 
 # 相关性判断Agent
-RELEVANCE_MODEL=gpt-4o-mini
+RELEVANCE_MODEL=gpt-4.1
 RELEVANCE_TEMPERATURE=0.2
 RELEVANCE_MAX_TOKENS=1000
 
 # 充分性判断Agent
-SUFFICIENCY_MODEL=gpt-4o-mini
+SUFFICIENCY_MODEL=gpt-4.1
 SUFFICIENCY_TEMPERATURE=0.3
 SUFFICIENCY_MAX_TOKENS=500
 
 # 答案生成Agent
-ANSWER_MODEL=gpt-4o
+ANSWER_MODEL=gpt-4.1
 ANSWER_TEMPERATURE=0.5
 ANSWER_MAX_TOKENS=2000
 
 # 辅助Agent
-INTENT_MODEL=gpt-4o-mini
-QUERY_REWRITE_MODEL=gpt-4o-mini
-CLASSIFIER_MODEL=gpt-4o-mini
-SIMPLE_ANSWER_MODEL=gpt-4o-mini
+INTENT_MODEL=gpt-4.1
+QUERY_REWRITE_MODEL=gpt-4.1
+CLASSIFIER_MODEL=gpt-4.1
+SIMPLE_ANSWER_MODEL=gpt-4.1
 ```
 
 ### 检索参数配置
@@ -549,22 +586,22 @@ SEMANTIC_THRESHOLD=0.5
 
 ### 时间分配目标
 
-| 阶段 | 目标耗时 | 优化手段 |
-|------|---------|---------|
-| 意图识别 | ~0.3秒 | gpt-4o-mini |
-| 问题改写 | ~0.3秒 | gpt-4o-mini |
-| 问题分类 | ~0.3秒 | gpt-4o-mini |
-| 问题分解 | ~1秒 | gpt-4o-mini + 缓存 |
-| 第一阶段并行检索 | ~1.5秒 | asyncio.gather |
-| 第一阶段并行判断 | ~1.5秒 | asyncio.gather |
-| 充分性判断 | ~0.5秒 | gpt-4o-mini |
-| 答案生成启动 | 立即 | 流式输出 |
-| **首字延迟** | **< 5秒** | **总计约4.5秒** |
+| 阶段             | 目标耗时   | 优化手段          |
+| ---------------- | ---------- | ----------------- |
+| 意图识别         | ~0.3 秒    | gpt-4.1           |
+| 问题改写         | ~0.3 秒    | gpt-4.1           |
+| 问题分类         | ~0.3 秒    | gpt-4.1           |
+| 问题分解         | ~1 秒      | gpt-4.1 + 缓存    |
+| 第一阶段并行检索 | ~1.5 秒    | asyncio.gather    |
+| 第一阶段并行判断 | ~1.5 秒    | asyncio.gather    |
+| 充分性判断       | ~0.5 秒    | gpt-4.1           |
+| 答案生成启动     | 立即       | 流式输出          |
+| **首字延迟**     | **< 5 秒** | **总计约 4.5 秒** |
 
 ### 并行化策略
 
 1. **所有子检索完全并行**：使用 `asyncio.gather` 并行执行所有子检索
-2. **BM25和语义检索并行**：每个子检索内部也并行
+2. **BM25 和语义检索并行**：每个子检索内部也并行
 3. **所有相关性判断并行**：同时处理所有子检索的相关性判断
 4. **第二阶段同样并行**：如果触发，采用相同并行策略
 
@@ -574,24 +611,24 @@ SEMANTIC_THRESHOLD=0.5
 
 ### 修改原则
 
-1. **保持角色定位一致**：每个Agent的专业定位不变
-2. **输出格式稳定**：JSON结构变化需同步更新代码
+1. **保持角色定位一致**：每个 Agent 的专业定位不变
+2. **输出格式稳定**：JSON 结构变化需同步更新代码
 3. **示例保持更新**：修改规则后更新示例
 4. **版本控制**：重大修改时备份旧版本
 
 ### 优化方向
 
-1. **减少token消耗**：简化示例，移除冗余说明
+1. **减少 token 消耗**：简化示例，移除冗余说明
 2. **提高准确性**：根据实际表现调整判断标准
 3. **增强鲁棒性**：添加边界情况处理说明
 4. **改进可读性**：使用清晰的结构和标记
 
 ### 测试建议
 
-1. **单元测试**：每个Agent独立测试
+1. **单元测试**：每个 Agent 独立测试
 2. **集成测试**：完整流程测试
 3. **边界测试**：异常输入、空值、极端情况
-4. **A/B测试**：对比不同提示词版本的效果
+4. **A/B 测试**：对比不同提示词版本的效果
 
 ---
 
@@ -600,6 +637,7 @@ SEMANTIC_THRESHOLD=0.5
 ### Q1: 如何调整第二阶段触发率？
 
 修改 `sufficiency_judge_system_prompt.txt` 中的：
+
 - 判断标准的严格程度
 - 触发率目标描述（当前是 < 20%）
 - 示例中充分/不充分的比例
@@ -607,8 +645,9 @@ SEMANTIC_THRESHOLD=0.5
 ### Q2: 如何让答案更简洁/更详细？
 
 修改 `answer_generation_system_prompt.txt` 中的：
-- 输出长度要求（当前是2-4句话）
-- 论据数量（当前是3-5个）
+
+- 输出长度要求（当前是 2-4 句话）
+- 论据数量（当前是 3-5 个）
 - 详细程度描述
 
 ### Q3: 如何添加新的问题类型？
@@ -620,6 +659,7 @@ SEMANTIC_THRESHOLD=0.5
 ### Q4: 如何扩展服务范围？
 
 修改 `intent_classifier_system_prompt.txt` 中的：
+
 - 核心范围列表
 - 边缘范围列表
 - 不在范围内列表
@@ -628,9 +668,9 @@ SEMANTIC_THRESHOLD=0.5
 
 ## 版本记录
 
-| 版本 | 日期 | 说明 |
-|------|------|------|
-| v1.0 | 2025-12-25 | 初始版本，包含8组16个提示词文件 |
+| 版本 | 日期       | 说明                                |
+| ---- | ---------- | ----------------------------------- |
+| v1.0 | 2025-12-25 | 初始版本，包含 8 组 16 个提示词文件 |
 
 ---
 
