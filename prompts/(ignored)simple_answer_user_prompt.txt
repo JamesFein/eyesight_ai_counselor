@@ -1,0 +1,23 @@
+# 用户问题
+
+"""
+{{original_query}}
+"""
+
+# 检索结果
+
+以下是从权威文档中检索到的相关内容：
+
+{{#each retrieved_chunks}}
+---
+**来源**: {{this.source_file}}
+**相似度**: {{this.score}}
+**内容**:
+"""
+{{this.content}}
+"""
+{{/each}}
+
+---
+
+请基于以上检索结果，为用户问题生成简洁、直接的回答。

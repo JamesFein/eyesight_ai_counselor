@@ -1,0 +1,39 @@
+# 用户问题
+
+"""
+{{original_query}}
+"""
+
+# 检索与分析结果
+
+以下是针对用户问题进行多维度检索和分析后收集到的相关信息：
+
+{{#each sub_query_analyses}}
+---
+## 维度{{@index}}: {{this.sub_query_statement}}
+
+**分析结论**: {{this.sub_answer}}
+
+**置信度**: {{this.confidence}}
+
+**支持段落**:
+{{#each this.relevant_extracts}}
+- **来源**: {{this.source_file}}
+  **原文**: "{{this.excerpt}}"
+
+{{/each}}
+{{/each}}
+
+---
+
+# 生成任务
+
+请根据以上检索结果，生成一份结构化的回答报告。
+
+要求：
+1. 严格遵循三段式结构：TL;DR → 完整结论 → 论据与来源
+2. 每个论点必须有来源引用和原文摘录
+3. 使用通俗易懂的语言，适合家长阅读
+4. 如果信息不足以完整回答，请诚实说明
+
+请直接输出报告内容，使用Markdown格式。

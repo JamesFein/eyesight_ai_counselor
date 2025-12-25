@@ -1,0 +1,17 @@
+# 用户问题
+
+请判断以下用户问题的意图：
+
+"""
+{{user_query}}
+"""
+
+{{#if conversation_history}}
+# 对话历史（供参考）
+
+{{#each conversation_history}}
+**{{this.role}}**: {{this.content}}
+{{/each}}
+{{/if}}
+
+请输出JSON格式的意图识别结果。

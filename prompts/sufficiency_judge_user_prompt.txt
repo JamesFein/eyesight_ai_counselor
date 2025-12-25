@@ -1,0 +1,52 @@
+# 原始问题
+
+用户的原始问题：
+"""
+{{original_query}}
+"""
+
+# 第一阶段检索结果
+
+## 子检索列表
+{{#each sub_queries}}
+- **{{this.id}}**: {{this.statement}} (聚焦: {{this.focus}})
+{{/each}}
+
+## 各子检索的分析结果
+
+{{#each sub_query_analyses}}
+---
+### {{this.sub_query_id}}: {{this.sub_query_statement}}
+
+**子答案**: {{this.sub_answer}}
+
+**置信度**: {{this.confidence}}
+
+**提取的相关段落**:
+{{#each this.relevant_extracts}}
+- [{{this.source_file}}] "{{this.excerpt}}"
+{{/each}}
+
+**缺失的知识点**:
+{{#if this.missing_aspects}}
+{{#each this.missing_aspects}}
+- {{this}}
+{{/each}}
+{{else}}
+无
+{{/if}}
+
+{{/each}}
+
+---
+
+# 判断任务
+
+请根据以上信息，判断当前收集的信息是否足以回答用户的原始问题。
+
+记住：
+- 大多数情况下（约80%），第一阶段结果应该是充分的
+- 只有在确实缺少关键信息时才触发第二阶段
+- 当你犹豫时，倾向于判断为"充分"
+
+请输出JSON格式的判断结果。

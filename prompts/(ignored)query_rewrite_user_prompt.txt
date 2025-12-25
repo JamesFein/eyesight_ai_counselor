@@ -1,0 +1,26 @@
+# 对话历史
+
+{{#if conversation_history}}
+以下是之前的对话记录：
+
+{{#each conversation_history}}
+**{{this.role}}**: {{this.content}}
+
+{{/each}}
+{{else}}
+（无历史对话，这是用户的首次提问）
+{{/if}}
+
+---
+
+# 当前用户问题
+
+"""
+{{current_query}}
+"""
+
+---
+
+请分析当前问题是否需要改写，如果需要，请结合对话历史将其改写为完整、独立的问题。
+
+输出JSON格式的结果。

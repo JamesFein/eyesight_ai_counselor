@@ -1,0 +1,24 @@
+# 子检索信息
+
+- **子检索ID**: {{sub_query_id}}
+- **子检索肯定句**: {{sub_query_statement}}
+- **聚焦点**: {{sub_query_focus}}
+
+# 检索到的文本块
+
+以下是针对该子检索从权威文档库中检索到的文本块，请判断其相关性并提取有价值的段落：
+
+{{#each retrieved_chunks}}
+---
+**文本块 {{@index}}**
+- 来源文件: {{this.source_file}}
+- 相似度分数: {{this.score}}
+- 内容:
+"""
+{{this.content}}
+"""
+{{/each}}
+
+---
+
+请根据要求分析以上文本块，输出JSON格式的相关性判断结果。
